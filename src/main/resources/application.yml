@@ -1,0 +1,39 @@
+server:
+  servlet:
+    context-path: /pd-mng
+
+spring:
+  application:
+    name: product-manager
+  docker:
+    compose:
+      file: product-manager-docker/compose.yaml
+      lifecycle-management: start_only
+      profiles:
+        active: dev
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/product_mng
+    username: tauber
+    password: secret
+
+  jpa:
+    show-sql: true
+    database: mysql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    password: secret
+    user: tauber
+    url: jdbc:mysql://localhost:3306/product_mng
+
+  data:
+    mongodb:
+      uri: mongodb://tauber:secret@localhost:27017/product_mng-mongo?authSource=admin
+
+

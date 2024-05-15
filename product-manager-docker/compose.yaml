@@ -1,0 +1,27 @@
+services:
+  product-mng-mongodb:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_DATABASE: product_mng-mongo
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      MONGO_INITDB_ROOT_USERNAME: tauber
+    ports:
+      - '27017:27017'
+    networks:
+      - productMngNetwork
+
+  product-mng-mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: product_mng
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: verySecret
+      MYSQL_USER: tauber
+    ports:
+      - '3306:3306'
+    networks:
+      - productMngNetwork
+
+networks:
+  productMngNetwork:
+    driver: bridge
