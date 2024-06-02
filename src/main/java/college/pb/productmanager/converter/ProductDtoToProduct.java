@@ -1,7 +1,7 @@
 package college.pb.productmanager.converter;
 
 import college.pb.productmanager.model.entity.Product;
-import college.pb.productmanager.model.entity.ProductDto;
+import college.pb.productmanager.model.dto.ProductDto;
 import jakarta.annotation.Nonnull;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

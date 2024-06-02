@@ -36,4 +36,17 @@ spring:
     mongodb:
       uri: mongodb://tauber:secret@localhost:27017/product_mng-mongo?authSource=admin
 
+    redis:
+      host: localhost
+      port: 6379
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, env, conditions
+  endpoint:
+    health:
+      show-details: always
+
 

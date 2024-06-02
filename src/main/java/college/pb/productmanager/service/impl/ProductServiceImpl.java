@@ -1,7 +1,7 @@
 package college.pb.productmanager.service.impl;
 
 import college.pb.productmanager.model.entity.Product;
-import college.pb.productmanager.model.entity.ProductDto;
+import college.pb.productmanager.model.dto.ProductDto;
 import college.pb.productmanager.repository.ProductRepository;
 import college.pb.productmanager.service.ProductService;
 import java.util.List;

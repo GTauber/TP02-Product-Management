@@ -22,6 +22,14 @@ services:
     networks:
       - productMngNetwork
 
+  accounting-redis:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - productMngNetwork
+
 networks:
   productMngNetwork:
     driver: bridge

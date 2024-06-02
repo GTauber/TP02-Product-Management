@@ -1,4 +1,4 @@
-package college.pb.productmanager.model.entity;
+package college.pb.productmanager.model.dto;
 
 import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 
